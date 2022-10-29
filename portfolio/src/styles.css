@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #000;
+    opacity: 1;
+    background-image:  radial-gradient(#fb4a71 1px, transparent 1px), radial-gradient(#fb4a71 1px, #000 1px);
+    background-size: 40px 40px;
+    background-position: 0 0,20px 20px;
+    position: relative;
+    font-family: Helvetica;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
