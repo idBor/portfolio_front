@@ -23,26 +23,26 @@
                 -->
     
                 <div class="col-3">
-                    <h1 class="text-light" id="text"><small></small>{{Experience.nameExp}}</h1>
+                    <h1 class="text-light" id="text"><small></small>{{Experience.name}}</h1>
                 </div>
                 <div class="col-3">
-                    <h2 class="text-light" id="text"><small>Desde: </small>{{Experience.dateStart_exp}}</h2>
+                    <h2 class="text-light" id="text"><small>Desde: </small>{{Experience.dateStart}}</h2>
                 </div>
                 <div class="col-4">
-                    <h2 class=" text-light" id="text"><small>Hasta: </small>{{Experience.dateEnd_exp}}</h2>
+                    <h2 class=" text-light" id="text"><small>Hasta: </small>{{Experience.dateEnd}}</h2>
                 </div>
                 <div class="col-2 d-flex justify-content-end align-self-center" *ngIf="isLogged">
-                    <button type="button" class="btn btn-light" id="bt" routerLink="/editexp/{{Experience.id_exp}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>
+                    <button type="button" class="btn btn-light" id="bt" routerLink="/editexp/{{Experience.id}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>
                 </div>
             </div>
             <div class="row col-lg-12" >
                 <div class="col-10">
                     <span>
-                        <p class="text-light line-height" id="description">{{Experience.description_exp}}</p>
+                        <p class="text-light line-height" id="description">{{Experience.description}}</p>
                     </span>
                 </div>
                 <div class="col-2 d-flex justify-content-end align-self-center" *ngIf="isLogged">
-                    <button type="button" class="btn btn-light" id="bt" (click)="delete(Experience.id_exp)"><i class="bi bi-trash rounded-circle p-1"></i></button>
+                    <button type="button" class="btn btn-light" id="bt" (click)="delete(Experience.id)"><i class="bi bi-trash rounded-circle p-1"></i></button>
                 </div>
 
             </div>

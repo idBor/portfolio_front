@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Proyects } from 'src/app/model/proyects';
+import { ProyectsService } from 'src/app/service/proyects.service';
 
 @Component({
   selector: 'app-new-proyect',
@@ -15,7 +18,7 @@ export class NewProyectComponent implements OnInit {
     img: ''
   }
 
-  constructor(private proyectService: ProyectsServiceService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private proyectService: ProyectsService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }

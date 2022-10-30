@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Education } from 'src/app/model/education';
+import { EducationService } from 'src/app/service/education.service';
 
 @Component({
   selector: 'app-new-education',
@@ -7,31 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewEducationComponent implements OnInit {
 
-  degreeEdu: string = '';
-  dateEnd_edu : string = '';
-  description_edu : string = '';
-  //img_edu: any = [];
+  degree: string = '';
+  dateEnd : string = '';
+  description : string = '';
 
-  //public preview!: string;
-
-  constructor(private educationService: EducationServiceService, private router: Router/*, private sanitizer: DomSanitizer*/) { }
+  constructor(private educationService: EducationService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  /*
-  captureFile(event: any): any {
-    const captureFile = event.target.files[0]
-    this.extractBase64(captureFile).then((imagen: any) => {
-      this.preview = imagen.base;
-      console.log(imagen);
-    })
-    this.img_exp.push(captureFile)
-  }
-  */
-
   onCreate(): void{
-    const expe = new Education(this.degreeEdu, this.dateEnd_edu, this.description_edu/*, this.img_exp*/);
+    const expe = new Education(this.degree, this.dateEnd, this.description);
     this.educationService.save(expe)
       .subscribe(
         {
@@ -46,28 +35,4 @@ export class NewEducationComponent implements OnInit {
         }
       )
   }
-  
-  /*
-  extractBase64 = async ($event: any) => new Promise((resolve, reject) => {
-    try {
-      const unsafeImg = window.URL.createObjectURL($event);
-      const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
-      const reader = new FileReader();
-      reader.readAsDataURL($event);
-      reader.onload = () => {
-        resolve({
-          base: reader.result
-        });
-      };
-      reader.onerror = error => {
-        resolve({
-          base: null
-        });
-      };
-    } catch (e) {
-      return $event;
-    }
-  })
-  */
-
 }

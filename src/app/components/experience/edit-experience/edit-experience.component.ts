@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Experience } from 'src/app/model/experience';
+import { ExperienceService } from 'src/app/service/experience.service';
 
 @Component({
   selector: 'app-edit-experience',
@@ -9,7 +12,7 @@ export class EditExperienceComponent implements OnInit {
 
   expLab: Experience = null;
 
-  constructor(private experienceService: ExperienceServiceService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private experienceService: ExperienceService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];

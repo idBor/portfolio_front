@@ -13,31 +13,30 @@
 
                 <form class="px-md-2" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                     <div class="form-outline">
-                        <input type="text" id="nameExp" class="form-control" name="nameExp" placeholder="Nombre" [(ngModel)]="expLab.nameExp" required />
-                        <label class="form-label" for="nameExp"></label>
+                        <input type="text" id="name" class="form-control" name="name" placeholder="Nombre" [(ngModel)]="expLab.name" required />
+                        <label class="form-label" for="name"></label>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-outline d-inline">
-                                <input type="text" class="form-control" id="dateStart_exp" name="dateStart_exp" placeholder="Desde - dd/mm/aa" [(ngModel)]="expLab.dateStart_exp" required />
-                                <label for="dateStart_exp" class="form-label"></label>
+                                <input type="text" class="form-control" id="dateStart" name="dateStart" placeholder="Desde - dd/mm/aa" [(ngModel)]="expLab.dateStart" required />
+                                <label for="dateStart" class="form-label"></label>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-outline d-inline">
-                                <input type="text" class="form-control" id="dateEnd_exp" name="dateEnd_exp" placeholder="Hasta - dd/mm/aa" [(ngModel)]="expLab.dateEnd_exp" required />
-                                <label for="dateEnd_exp" class="form-label"></label>
+                                <input type="text" class="form-control" id="dateEnd" name="dateEnd" placeholder="Hasta - dd/mm/aa" [(ngModel)]="expLab.dateEnd" required />
+                                <label for="dateEnd" class="form-label"></label>
                             </div>
                         </div>
-
                     </div>
 
                     <div class="row">
                         <div class="form-outline">
-                            <textarea class="form-control" id="description_exp" rows="4" name="description_exp" placeholder="Descripción" [(ngModel)]="expLab.description_exp" required></textarea>
-                            <label for="description_exp" class="form-label"></label>
+                            <textarea class="form-control" id="description" rows="4" name="description" placeholder="Descripción" [(ngModel)]="expLab.description" required></textarea>
+                            <label for="description" class="form-label"></label>
                         </div>
                     </div>
 

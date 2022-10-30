@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Proyects } from 'src/app/model/proyects';
+import { ProyectsService } from 'src/app/service/proyects.service';
 
 @Component({
   selector: 'app-edit-proyect',
@@ -9,7 +12,7 @@ export class EditProyectComponent implements OnInit {
 
   proy: Proyects = null;
   
-  constructor(private proyectsService: ProyectsServiceService, private activatedRoute: ActivatedRoute, private router: Router) { }
+  constructor(private proyectsService: ProyectsService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params['id'];
@@ -50,6 +53,4 @@ export class EditProyectComponent implements OnInit {
     const name = this.proy.name;
     this.proyectsService.uploadImg($event, name)    
   }
-
-
 }

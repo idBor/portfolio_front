@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Proyects } from 'src/app/model/proyects';
+import { ProyectsService } from 'src/app/service/proyects.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-proyects',
@@ -9,7 +12,7 @@ export class ProyectsComponent implements OnInit {
 
   proy: Proyects[] = [];
 
-  constructor(private proyectsService: ProyectsServiceService, private tokenService: TokenService) { }
+  constructor(private proyectsService: ProyectsService, private tokenService: TokenService) { }
 
   isLogged = false;
 

@@ -13,26 +13,26 @@
 
                 <form class="px-md-2" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                     <div class="form-outline">
-                        <input type="text" id="degreeEdu" class="form-control" name="degreeEdu" placeholder="Titulo"
-                            [(ngModel)]="edu.degreeEdu" required />
-                        <label class="form-label" for="degreeEdu"></label>
+                        <input type="text" id="degree" class="form-control" name="degree" placeholder="Titulo"
+                            [(ngModel)]="edu.degree" required />
+                        <label class="form-label" for="degree"></label>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-outline d-inline">
-                                <input type="text" class="form-control" id="dateEnd_edu" name="dateEnd_edu"
-                                    placeholder="Año" [(ngModel)]="edu.dateEnd_edu" required />
-                                <label for="dateEnd_edu" class="form-label"></label>
+                                <input type="text" class="form-control" id="dateEnd" name="dateEnd"
+                                    placeholder="Año" [(ngModel)]="edu.dateEnd" required />
+                                <label for="dateEnd" class="form-label"></label>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-outline">
-                            <textarea class="form-control" id="description_edu" rows="4" name="description_edu"
-                                placeholder="Descripción" [(ngModel)]="edu.description_edu" required></textarea>
-                            <label for="description_edu" class="form-label"></label>
+                            <textarea class="form-control" id="description" rows="4" name="description"
+                                placeholder="Descripción" [(ngModel)]="edu.description" required></textarea>
+                            <label for="description" class="form-label"></label>
                         </div>
                     </div>
 

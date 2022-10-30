@@ -22,30 +22,27 @@
                 -->
         
                 <div class="col-5">
-                    <h1 class="text-light" id="text"><small>Título: </small>{{Education.degreeEdu}}</h1>
+                    <h1 class="text-light" id="text"><small>Título: </small>{{Education.degree}}</h1>
                 </div>
                 <div class="col-5">
-                    <h2 class=" text-light" id="text"><small>Año: </small>{{Education.dateEnd_edu}}</h2>
+                    <h2 class=" text-light" id="text"><small>Año: </small>{{Education.dateEnd}}</h2>
                 </div>
                 <div class="col-2 d-flex justify-content-end align-self-center" *ngIf="isLogged">
-                    <button type="button" class="btn btn-light" id="bt" routerLink="/editedu/{{Education.id_edu}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>
+                    <button type="button" class="btn btn-light" id="bt" routerLink="/editedu/{{Education.id}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>
                 </div>
             </div>
             
             <div class="row col-lg-12" >
                 <div class="col-10">
                     <span>
-                        <p class="text-light line-height" id="description">{{Education.description_edu}}</p>
+                        <p class="text-light line-height" id="description">{{Education.description}}</p>
                     </span>
                 </div>
                 <div class="col-2 d-flex justify-content-end align-self-center" *ngIf="isLogged">
-                    <button type="button" class="btn btn-light" id="bt" (click)="delete(Education.id_edu)"><i class="bi bi-trash rounded-circle p-1"></i></button>
-                </div>
-                        
+                    <button type="button" class="btn btn-light" id="bt" (click)="delete(Education.id)"><i class="bi bi-trash rounded-circle p-1"></i></button>
+                </div>          
             </div>
-        </div>
-                
+        </div> 
     </div>    
-
 </div>
 

@@ -36,8 +36,8 @@
             ></circle-progress>
     
             <div class="d-grid gap-2 d-flex justify-content-center" *ngIf="isLogged">
-                <button type="button" class="btn btn-light" id="bt" routerLink="/editskill/{{Skills.id_skill}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>
-                <button type="button" class="btn btn-light" id="bt" (click)="delete(Skills.id_skill)"><i class="bi bi-trash rounded-circle p-1"></i></button>
+                <button type="button" class="btn btn-light" id="bt" routerLink="/editskill/{{Skills.id}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>
+                <button type="button" class="btn btn-light" id="bt" (click)="delete(Skills.id)"><i class="bi bi-trash rounded-circle p-1"></i></button>
             </div>
 
         </div>

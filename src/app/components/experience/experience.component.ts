@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Experience } from 'src/app/model/experience';
+import { ExperienceService } from 'src/app/service/experience.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-experience',
@@ -9,7 +12,7 @@ export class ExperienceComponent implements OnInit {
 
   expe: Experience[] = [];
 
-  constructor(private experienceService: ExperienceServiceService, private tokenService: TokenService) { }
+  constructor(private experienceService: ExperienceService, private tokenService: TokenService) { }
 
   isLogged = false;
 

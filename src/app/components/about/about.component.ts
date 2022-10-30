@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Person } from 'src/app/model/person';
+import { PersonService } from 'src/app/service/person.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-about',

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Skills } from 'src/app/model/skills';
+import { SkillsService } from 'src/app/service/skills.service';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-skills',
@@ -9,7 +12,7 @@ export class SkillsComponent implements OnInit {
 
   skill: Skills[] = [];
 
-  constructor(private skillsService: SkillsServiceService, private tokenService: TokenService) { }
+  constructor(private skillsService: SkillsService, private tokenService: TokenService) { }
 
   isLogged = false;
 

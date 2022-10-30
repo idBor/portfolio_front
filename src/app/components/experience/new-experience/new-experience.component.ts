@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Experience } from 'src/app/model/experience';
+import { ExperienceService } from 'src/app/service/experience.service';
 
 @Component({
   selector: 'app-new-experience',
@@ -7,32 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewExperienceComponent implements OnInit {
 
-  nameExp: string = '';
-  dateStart_exp : string = '';
-  dateEnd_exp : string = '';
-  description_exp : string = '';
-  //img_exp: any = [];
+  name: string = '';
+  dateStart : string = '';
+  dateEnd : string = '';
+  description : string = '';
 
-  //public preview!: string;
-  
-  constructor(private experienceService: ExperienceServiceService, private router: Router/*, private sanitizer: DomSanitizer*/) { }
+  constructor(private experienceService: ExperienceService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  /*
-  captureFile(event: any): any {
-    const captureFile = event.target.files[0]
-    this.extractBase64(captureFile).then((imagen: any) => {
-      this.preview = imagen.base;
-      console.log(imagen);
-    })
-    this.img_exp.push(captureFile)
-  }
-  */
-
   onCreate(): void{
-    const expe = new Experience(this.nameExp, this.dateStart_exp, this.dateEnd_exp, this.description_exp/*, this.img_exp*/);
+    const expe = new Experience(this.name, this.dateStart, this.dateEnd, this.description);
     this.experienceService.save(expe)
       .subscribe(
         {
@@ -47,28 +36,4 @@ export class NewExperienceComponent implements OnInit {
         }
       )
   }
-  
-  /*
-  extractBase64 = async ($event: any) => new Promise((resolve, reject) => {
-    try {
-      const unsafeImg = window.URL.createObjectURL($event);
-      const image = this.sanitizer.bypassSecurityTrustUrl(unsafeImg);
-      const reader = new FileReader();
-      reader.readAsDataURL($event);
-      reader.onload = () => {
-        resolve({
-          base: reader.result
-        });
-      };
-      reader.onerror = error => {
-        resolve({
-          base: null
-        });
-      };
-    } catch (e) {
-      return $event;
-    }
-  })
-  */
-
 }

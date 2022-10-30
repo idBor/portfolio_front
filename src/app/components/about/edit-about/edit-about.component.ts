@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Person } from 'src/app/model/person';
+import { PersonService } from 'src/app/service/person.service';
+import { Storage, ref, list, uploadBytes, getDownloadURL } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-edit-about',
@@ -24,7 +28,6 @@ export class EditAboutComponent implements OnInit {
             this.router.navigate(['']);
           }
         }
-        
       )
   }
 

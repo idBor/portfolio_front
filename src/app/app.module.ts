@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { NavbarComponent } from './components/header/navbar/navbar.component';
@@ -24,6 +25,12 @@ import { NewProyectComponent } from './components/proyects/new-proyect/new-proye
 import { EditProyectComponent } from './components/proyects/edit-proyect/edit-proyect.component';
 import { EditSkillComponent } from './components/skills/edit-skill/edit-skill.component';
 import { NewSkillComponent } from './components/skills/new-skill/new-skill.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { interceptorProvider } from './service/interceptor.service';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -53,9 +60,17 @@ import { NewSkillComponent } from './components/skills/new-skill/new-skill.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
