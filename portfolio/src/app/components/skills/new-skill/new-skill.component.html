@@ -1,0 +1,50 @@
+<section class="container-fluid gradient-form d-flex justify-content-center align-items-center">
+    <div class="card rounded-3 w-50 text-black m-4">
+        <div class="col-12">
+            <div class="card-body p-md-3 mx-md-2">
+
+                <div >
+                    <img src="../../../assets/banner.png" style="width: 100%;" alt="logo">
+                </div>
+
+                <div class="text-center mt-4">
+                    <h1 class="">Agregar Skill</h1>
+                </div>
+
+                <form class="" (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+                    <div class="form-outline d-inline row">
+                        <input type="text" id="name" class="form-control" name="name" placeholder="Nombre" [(ngModel)]="name" required />
+                        <label class="form-label" for="name"></label>
+                    </div>
+        
+                    <div class="form-outline d-inline row">
+                        <input type="text" class="form-control" id="percentage" name="percentage" placeholder="Porcentaje" [(ngModel)]="percentage" required />
+                        <label for="percentage" class="form-label"></label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                        <!--
+                            <div class="form-outline d-inline">
+                                <input class=" form-control-sm d-inline" type="file" value="select" id="file" #selectImg (change)="captureFile($event)">
+                            </div>
+                            <div *ngIf="preview">
+                                <img class="img-fluid p-2" [src]="preview" alt="">
+                            </div>
+                        -->
+
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="form-outline d-inline d-grid gap-2 d-flex justify-content-end">
+                                <button class="d-inline btn p-0" type="submit" class="btn btn-light btn-md mb-1" id="button"><strong>Agregar</strong></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</section>

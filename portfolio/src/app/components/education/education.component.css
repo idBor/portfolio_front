@@ -1,0 +1,145 @@
+.separador{
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+#titulo{
+    margin: 4%;
+    color: #fff;
+    text-shadow: 5px 5px 20px #fb4a71;
+}
+
+#card{
+    background: rgb(188,57,119);
+    background: linear-gradient(90deg, rgba(188,57,119,0.7724137931034483) 0%, rgba(56,48,132,0.6689655172413793) 72%);
+    width: 95%;
+    opacity: 1;    
+}
+
+@media only screen and (min-width:577px) and (max-width:992px){
+    #titulo{
+        font-size: xx-large;
+        margin: 4%;
+        color: #fff;
+        text-shadow: 5px 5px 20px #fb4a71;
+    }
+
+    #bt{
+        width: 3rem;
+        height: 1.7rem;
+        text-align: center;
+        font-size: 0.6rem;      
+     }    
+
+     #button{
+        width: 3rem;
+        height: 1.7rem;
+        text-align: center;
+        font-size: 0.6rem; 
+        filter: drop-shadow(5px 5px 10px #fb4a71);
+    }
+
+    #description{
+        font-weight: bolder;
+        font-size: medium;
+        color: #fff;
+        
+        padding-top: 2%;
+        line-height: 1;
+    }
+
+    #text{
+        font-weight: bolder;
+        font-size: large;
+        color: #fff;
+        
+        padding-top: 2%;
+    }
+
+}
+
+@media only screen and (min-width:1px) and (max-width:576px){
+    #titulo{
+        font-size: x-large;
+        margin: 4%;
+        color: #fff;
+        text-shadow: 5px 5px 20px #fb4a71;
+    }
+
+    #bt{
+        width: 2.5rem;
+        height: 1.5rem;
+        text-align: center;
+        font-size: 0.5rem;
+        margin-right: 0.1rem;      
+     }
+
+     #button{
+        width: 2.5rem;
+        height: 1.5rem;
+        text-align: center;
+        font-size: 0.5rem; 
+        filter: drop-shadow(5px 5px 10px #fb4a71);
+    }
+
+    #description{
+        font-weight: bolder;
+        font-size: small;
+        color: #fff;
+        
+        padding-top: 2%;
+        line-height: 1;
+    }
+
+    #text{
+        font-weight: bolder;
+        font-size: medium;
+        color: #fff;
+        
+        padding-top: 2%;
+    }
+  }
+
+  @media only screen and (min-width:993px){
+    #titulo{
+        font-size: 4rem;
+        margin: 4%;
+        color: #fff;
+        text-shadow: 5px 5px 20px #fb4a71;
+    }
+
+    #bt{
+        width: 5rem;
+        height: 2.7rem;
+        text-align: center;
+        font-size: 1.2rem;      
+     }    
+
+     #button{
+        width: 5rem;
+        height: 2.7rem;
+        text-align: center;
+        font-size: 1.2rem; 
+        filter: drop-shadow(5px 5px 10px #fb4a71);
+    }
+
+    #description{
+        font-weight: bolder;
+        font-size: large;
+        color: #fff;
+        padding-top: 2%;
+        line-height: 1;
+    }
+
+    #text{
+        font-weight: bolder;
+        font-size: x-large;
+        color: #fff;
+        
+        padding-top: 2%;
+    }
+
+}
+
+

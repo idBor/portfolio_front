@@ -1,0 +1,75 @@
+<section class="container-fluid gradient-form d-flex justify-content-center align-items-center" *ngIf="proy">
+    <div class="card rounded-3 w-50 text-black m-4">
+        <div class="col-12">
+            <div class="card-body p-md-3 mx-md-2">
+
+                <div class="text-center">
+                    <img src="../../../assets/banner.png" style="width: 100%;" alt="logo">
+                    <h3 class="mt-1 pb-md-0 mb-md-5 px-md-2">Editar Proyecto</h3>
+                </div>
+
+                <form class="px-md-2" (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+                    <div class="form-outline">
+                        <input type="text" id="name" class="form-control" name="name" placeholder="Nombre" [(ngModel)]="proy.name" required />
+                        <label class="form-label" for="name"></label>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-outline d-inline">
+                                <input type="text" class="form-control" id="dateEnd" name="dateEnd" placeholder="Año" [(ngModel)]="proy.dateEnd" required />
+                                <label for="dateEnd" class="form-label"></label>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-outline d-inline">
+                                <input type="url" class="form-control" id="link" name="link" placeholder="Link" [(ngModel)]="proy.link" required />
+                                <label for="link" class="form-label"></label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="form-outline">
+                            <textarea class="form-control" id="description" rows="4" name="description" placeholder="Descripción" [(ngModel)]="proy.description" required></textarea>
+                            <label for="description" class="form-label"></label>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                        
+                            <div class="form-outline">
+                                <input type="file" class="form-control-sm" id="img" name="img" (change)="uploadImg($event)" accept=".jpg, .jpeg, .png">
+                                <label for="img" class="form-label"></label>
+                            </div>
+
+                        <!--
+                            <div class="form-outline d-inline">
+                                <input class=" form-control-sm d-inline" type="file" value="select" id="file" #selectImg (change)="captureFile($event)">
+                            </div>
+                            <div *ngIf="preview">
+                                <img class="img-fluid p-2" [src]="preview" alt="">
+                            </div>
+                        -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <div class="form-outline d-inline d-grid gap-2 d-flex justify-content-end">
+                                <button class="d-inline btn p-0" type="submit" class="btn btn-light btn-md mb-1" id="button"><strong>Enviar</strong></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+             </div>
+        </div>
+    </div>
+</section>

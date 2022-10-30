@@ -1,0 +1,49 @@
+<div class="container-fluid" id="proyects" *ngIf="proy">
+    <div class="row">
+        <img src="../../../assets/divisor.png" alt="" class="img-fluid mx-auto d-block separador">
+    </div>
+
+    <div class="row col-lg-12 d-flex justify-content-center me-1" id="head">
+        <h1 class="col-6" id="titulo">Proyectos Realizados</h1>
+        <div class="col-5 d-flex justify-content-end align-self-center m-0 p-0" >
+            <button type="button" id="button" class="btn btn-floating m-1 btn-light" routerLink="/newProyect" *ngIf="isLogged">
+                <i class="bi bi-plus-square rounded-circle p-1"></i>
+            </button>
+        </div>
+    </div>
+
+    <div *ngFor="let Proyects of proy" class="row d-flex justify-content-center m-0 p-0" id="table">
+        <div class="card rounded-4 p-2 m-0" id="card">
+            <div class="row col-lg-12" >
+                <div class="col-4">
+                    <h1 class="text-light" id="text"><small></small>{{Proyects.name}}</h1>
+                </div>
+
+                <div class="col-3">
+                    <h2 class="text-light" id="text"><small></small>{{Proyects.dateEnd}}</h2>
+                </div>
+
+                <div class="col-3" id="direccion">
+                    <a href="{{Proyects.link}}" id="link">Ir al Proyecto</a>
+                </div>
+                    
+                <div class="col-2 d-flex justify-content-end align-self-center" *ngIf="isLogged">
+                    <button type="button" class="btn btn-light" id="bt" routerLink="/editproy/{{Proyects.id}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>
+                </div>
+            </div>
+
+            <div class="row col-lg-12" >
+                <div class="col-10" id="">
+                    <span>
+                        <p class="text-light line-height" id="description"><img src={{Proyects.img}} class="img-fluid img_exp">{{Proyects.description}}</p>
+                        
+                    </span>
+                </div>
+  
+                <div class="col-2 d-flex justify-content-end align-self-center" *ngIf="isLogged">
+                    <button type="button" class="btn btn-light" id="bt" (click)="delete(Proyects.id)"><i class="bi bi-trash rounded-circle p-1"></i></button>
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>

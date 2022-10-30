@@ -1,0 +1,45 @@
+<div class="container-fluid" id="skills">
+    <div class="row">
+        <img src="../../../assets/divisor.png" alt="" class="img-fluid mx-auto d-block separador">
+    </div>
+    
+
+    <div class="row col-lg-12 d-flex justify-content-center me-1" id="head">
+        <h1 class="col-6" id="titulo">Skills</h1>
+        <div class="col-5 d-flex justify-content-end align-self-center m-0 p-0" >
+            <button type="button" id="button" class="btn btn-floating m-1 btn-light" routerLink="/newSkill" *ngIf="isLogged">
+                <i class="bi bi-plus-square rounded-circle p-1"></i>
+            </button>
+        </div>
+        
+    </div>
+
+    <div class="row col-12 p-0 m-0">
+        <div class="col-lg-3 col-md-3 col-sm-4 col-4" *ngFor="let Skills of skill">
+            <circle-progress id="skill"
+                [percent]="Skills.percentage"
+                [radius]="70"
+                [title]="(Skills.name)"
+                [responsive]="true"
+                [titleFontSize]="'120%'"
+                [showSubtitle]="false"
+                [outerStrokeWidth]="8"
+                [titleColor]="'#00f7f9'"
+                [showUnits]="false"
+                [innerStrokeWidth]="3"
+                [outerStrokeColor]="'#fb4a71'"
+                [innerStrokeColor]="'#204d84'"
+                [animation]="true"
+                [animationDuration]="600"
+                [showBackground]="true"
+                [backgroundColor]="'#000'"
+            ></circle-progress>
+    
+            <div class="d-grid gap-2 d-flex justify-content-center" *ngIf="isLogged">
+                <button type="button" class="btn btn-light" id="bt" routerLink="/editskill/{{Skills.id_skill}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>
+                <button type="button" class="btn btn-light" id="bt" (click)="delete(Skills.id_skill)"><i class="bi bi-trash rounded-circle p-1"></i></button>
+            </div>
+
+        </div>
+    </div>
+</div>

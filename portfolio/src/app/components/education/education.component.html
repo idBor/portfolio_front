@@ -1,0 +1,51 @@
+<div class="container-fluid" id="edu">
+    <div class="row">
+        <img src="../../../assets/divisor.png" alt="" class="img-fluid mx-auto d-block separador">
+    </div>
+
+    <div class="row col-lg-12 d-flex justify-content-center me-1" id="head">
+        <h1 class="col-6" id="titulo">Educación</h1>
+        <div class="col-5 d-flex justify-content-end align-self-center m-0 p-0" >
+            <button type="button" id="button" class="btn btn-floating m-1 btn-light" routerLink="/newEducation" *ngIf="isLogged">
+                <i class="bi bi-plus-square rounded-circle p-1"></i>
+            </button>
+        </div>
+    </div>
+
+    <div *ngFor="let Education of edu" class="row d-flex justify-content-center m-0 p-0" id="table">
+        <div class="card rounded-4 p-2 m-2" id="card">
+            <div class="row col-lg-12" >
+                <!--
+                    <div class="col-2 p-0">
+                        <img [src]="" src="" class="img-fluid mx-auto d-block img_edu">
+                    </div>
+                -->
+        
+                <div class="col-5">
+                    <h1 class="text-light" id="text"><small>Título: </small>{{Education.degreeEdu}}</h1>
+                </div>
+                <div class="col-5">
+                    <h2 class=" text-light" id="text"><small>Año: </small>{{Education.dateEnd_edu}}</h2>
+                </div>
+                <div class="col-2 d-flex justify-content-end align-self-center" *ngIf="isLogged">
+                    <button type="button" class="btn btn-light" id="bt" routerLink="/editedu/{{Education.id_edu}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>
+                </div>
+            </div>
+            
+            <div class="row col-lg-12" >
+                <div class="col-10">
+                    <span>
+                        <p class="text-light line-height" id="description">{{Education.description_edu}}</p>
+                    </span>
+                </div>
+                <div class="col-2 d-flex justify-content-end align-self-center" *ngIf="isLogged">
+                    <button type="button" class="btn btn-light" id="bt" (click)="delete(Education.id_edu)"><i class="bi bi-trash rounded-circle p-1"></i></button>
+                </div>
+                        
+            </div>
+        </div>
+                
+    </div>    
+
+</div>
+

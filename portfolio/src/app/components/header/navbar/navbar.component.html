@@ -1,0 +1,17 @@
+<div class="container-fluid p-0">
+    <nav class="col-12 navbar navbar-none bg-none" id="navbar">
+
+            <a class="col-4 d-flex justify-content-start align-content-center me-0" href="https://www.argentina.gob.ar/produccion/transformacion-digital-y-economia-del-conocimiento/argentina-programa" target="_blank">
+            <img src="../../../assets/AP-Logo.png" alt="" id="logo">
+            </a>
+    
+            <form class="col-8 m-0 d-flex justify-content-end align-content-center" id="rrss">
+                <a href="https://www.linkedin.com/in/federico-borgo-1b5850238/" target="_blank"><img class="" src="../../../assets/linkedin.png" alt="" id="social"></a>
+                <a href="https://twitter.com/id_fBor" target="_blank"><img class="" src="../../../assets/twitter.png" alt="" id="social"></a>
+                <a href="https://github.com/idBor" target="_blank"><img class="" src="../../../assets/github.png" alt="" id="social"></a>
+                <button class="btn btn-light" (click)="login()" *ngIf="!isLogged"  id="ingresar" type="submit">Login</button>
+                <button class="btn btn-light" (click)="onLogOut()" *ngIf="isLogged"  id="salir" type="submit">Logout</button>
+            </form>
+
+    </nav>
+</div>
