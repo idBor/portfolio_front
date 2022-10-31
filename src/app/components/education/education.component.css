@@ -4,11 +4,7 @@
     margin-bottom: 1%;
 }
 
-#titulo{
-    margin: 4%;
-    color: #fff;
-    text-shadow: 5px 5px 20px #fb4a71;
-}
+
 
 #card{
     background: rgb(188,57,119);
@@ -41,7 +37,7 @@
     }
 
     #description{
-        font-weight: bolder;
+        font-weight: normal;
         font-size: medium;
         color: #fff;
         
@@ -84,7 +80,7 @@
     }
 
     #description{
-        font-weight: bolder;
+        font-weight: normal;
         font-size: small;
         color: #fff;
         
@@ -103,7 +99,7 @@
 
   @media only screen and (min-width:993px){
     #titulo{
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 4%;
         color: #fff;
         text-shadow: 5px 5px 20px #fb4a71;
@@ -125,7 +121,7 @@
     }
 
     #description{
-        font-weight: bolder;
+        
         font-size: large;
         color: #fff;
         padding-top: 2%;

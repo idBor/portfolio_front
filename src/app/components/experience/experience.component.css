@@ -43,7 +43,7 @@
     }
 
     #description{
-        font-weight: bold;
+        font-weight: normal;
         font-size: medium;
         color: #fff;
         padding-top: 2%;
@@ -82,7 +82,7 @@
     }
 
     #description{
-        font-weight: bold;
+        font-weight: normal;
         font-size: small;
         color: #fff;
         padding-top: 2%;
@@ -92,7 +92,7 @@
 
   @media only screen and (min-width:993px){
     #titulo{
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 4%;
         color: #fff;
         text-shadow: 5px 5px 20px #fb4a71;
@@ -121,7 +121,7 @@
     }
 
     #description{
-        font-weight: bold;
+        font-weight: normal;
         font-size: large;
         color: #fff;
         padding-top: 2%;

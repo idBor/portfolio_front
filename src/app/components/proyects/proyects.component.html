@@ -4,7 +4,7 @@
     </div>
 
     <div class="row col-lg-12 d-flex justify-content-center me-1" id="head">
-        <h1 class="col-6" id="titulo">Proyectos Realizados</h1>
+        <h1 class="col-6" id="titulo">Proyectos</h1>
         <div class="col-5 d-flex justify-content-end align-self-center m-0 p-0" >
             <button type="button" id="button" class="btn btn-floating m-1 btn-light" routerLink="/newProyect" *ngIf="isLogged">
                 <i class="bi bi-plus-square rounded-circle p-1"></i>
@@ -19,11 +19,11 @@
                     <h1 class="text-light" id="text"><small></small>{{Proyects.name}}</h1>
                 </div>
 
-                <div class="col-3">
+                <div class="col-2">
                     <h2 class="text-light" id="text"><small></small>{{Proyects.dateEnd}}</h2>
                 </div>
 
-                <div class="col-3" id="direccion">
+                <div class="col-4" id="direccion">
                     <a href="{{Proyects.link}}" id="link">Ir al Proyecto</a>
                 </div>
                     
@@ -35,7 +35,7 @@
             <div class="row col-lg-12" >
                 <div class="col-10" id="">
                     <span>
-                        <p class="text-light line-height" id="description"><img src={{Proyects.img}} class="img-fluid img_exp">{{Proyects.description}}</p>
+                        <p class="" id="description"><img src={{Proyects.img}} class="img-fluid img_exp">{{Proyects.description}}</p>
                         
                     </span>
                 </div>
