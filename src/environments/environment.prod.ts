@@ -1,13 +1,13 @@
 export const environment = {
   firebase: {
-    projectId: 'portfolio-idbor',
-    appId: '1:765686321019:web:22c49bd0c4e5f97f6437de',
-    storageBucket: 'portfolio-idbor.appspot.com',
+    projectId: 'portfolio-bor',
+    appId: '1:841561387918:web:5814d9bf691c7c506ceadf',
+    storageBucket: 'portfolio-bor.appspot.com',
     locationId: 'southamerica-east1',
-    apiKey: 'AIzaSyA67kWrjG91JUTpgCIK-yssxTcOBc-CMVE',
-    authDomain: 'portfolio-idbor.firebaseapp.com',
-    messagingSenderId: '765686321019',
+    apiKey: 'AIzaSyCmB6GUmzDsDDmz7lNjyEUSzSDg3H-NZEQ',
+    authDomain: 'portfolio-bor.firebaseapp.com',
+    messagingSenderId: '841561387918',
   },
   production: true,
-  URL: 'https://backendidbor.herokuapp.com/'
+  URL: 'https://portfoliobor.herokuapp.com/'
 };

@@ -44,11 +44,11 @@ export class ProyectsService {
     const imgRefUp = ref(this.storage, `proyect/` + name)
     
     uploadBytes(imgRefUp, img)
-      .then(response => { this.getImages($event) })
+      .then(response => { this.getImages() })
       .catch(error => console.log(error))
   }
 
-  getImages(image: any) {
+  getImages() {
     const imgRefGet = ref(this.storage, `proyect`)
 
     list(imgRefGet)
