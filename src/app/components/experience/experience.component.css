@@ -11,6 +11,10 @@
     width: 95%;
 }
 
+#exper{
+    font-family: "Hauora Sans", sans-serif;
+}
+
   @media only screen and (min-width:577px) and (max-width:992px){
     #titulo{
         font-size: xx-large;

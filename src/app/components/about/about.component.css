@@ -1,6 +1,7 @@
 @media only screen and (min-width:1px) and (max-width:370px){
     .contenedor{
         position: absolute;
+        font-family: "Hauora Sans", sans-serif;
     }
 
     #nombre{
@@ -46,7 +47,9 @@
 }
 
 @media only screen and (min-width:371px) and (max-width:480px){
-    
+    .contenedor{
+        font-family: "Hauora Sans", sans-serif;
+    }
 
     #nombre{
         font-weight: bolder;
@@ -94,6 +97,7 @@
 @media only screen and (min-width:481px) and (max-width:768px){
     .contenedor{
         position: absolute;
+        font-family: "Hauora Sans", sans-serif;
     }
 
     #nombre{
@@ -141,6 +145,7 @@
 @media only screen and (min-width:769px) and (max-width:992px){
     .contenedor{
         position: absolute;
+        font-family: "Hauora Sans", sans-serif;
     }
 
     #nombre{
@@ -182,6 +187,11 @@
 }
 
 @media only screen and (min-width:993px) and (max-width:1200px){
+    .contenedor{
+        position: absolute;
+        font-family: "Hauora Sans", sans-serif;
+    }
+
     #nombre{
         font-weight: bolder;
         font-size: 1.6rem;
@@ -226,7 +236,10 @@
 }
 
 @media only screen and (min-width:1201px){
-    
+    .contenedor{
+        position: absolute;
+        font-family: "Hauora Sans", sans-serif;
+    }
 
     #nombre{
         font-weight: bolder;

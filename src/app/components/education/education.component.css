@@ -4,13 +4,15 @@
     margin-bottom: 1%;
 }
 
-
+#edu{
+        font-family: "Hauora Sans", sans-serif;
+}
 
 #card{
     background: rgb(188,57,119);
     background: linear-gradient(90deg, rgba(188,57,119,0.7724137931034483) 0%, rgba(56,48,132,0.6689655172413793) 72%);
     width: 95%;
-    opacity: 1;    
+    opacity: 1;
 }
 
 @media only screen and (min-width:577px) and (max-width:992px){

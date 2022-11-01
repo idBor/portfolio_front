@@ -22,10 +22,10 @@
                 -->
         
                 <div class="col-5">
-                    <h1 class="text-light" id="text"><small>Título: </small>{{Education.degree}}</h1>
+                    <h1 class="text-light" id="text">{{Education.degree}}</h1>
                 </div>
                 <div class="col-5">
-                    <h2 class=" text-light" id="text"><small>Año: </small>{{Education.dateEnd}}</h2>
+                    <h2 class=" text-light" id="text">{{Education.dateEnd}}</h2>
                 </div>
                 <div class="col-2 d-flex justify-content-end align-self-center" *ngIf="isLogged">
                     <button type="button" class="btn btn-light" id="bt" routerLink="/editedu/{{Education.id}}"><i class="bi bi-pencil rounded-circle p-1"></i></button>

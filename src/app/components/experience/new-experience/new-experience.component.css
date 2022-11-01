@@ -9,6 +9,8 @@
     
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: linear-gradient(to right, #ae2c66, #9e296c, #8d2870, #7a2973, #652a74, #4f2b74, #362b71, #142a6c);
+
+        font-family: "Hauora Sans", sans-serif;
 }
 
 .gradient-form {
