@@ -181,7 +181,7 @@
         background: rgb(188,57,119);
         background: linear-gradient(90deg, rgba(188,57,119,0.7724137931034483) 0%, rgba(56,48,132,0.6689655172413793) 72%);
         opacity: 1;
-        font-size: large;
+        font-size: medium;
         margin-top: 2.2rem;        
     }
 }
