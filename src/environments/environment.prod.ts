@@ -9,5 +9,6 @@ export const environment = {
     messagingSenderId: '841561387918',
   },
   production: true,
-  URL: 'https://portfoliobor.herokuapp.com/'
+  //URL: 'https://portfoliobor.herokuapp.com/'
+  URL: 'https://portfolio-idfbor.koyeb.app/'
 };
